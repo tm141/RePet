@@ -60,7 +60,7 @@ export default function NavBar() {
                         Teams
                     </Link>
                 </div>
-                <button className="items-end laptop:hidden" onClick={handleSideBar}>
+                <button aria-label="side-bar" className="items-end laptop:hidden" onClick={handleSideBar}>
                     <div className="flex flex-col justify-between w-[20px] h-[20px]">
                         <div className="bg-black h-[2px] w-7 rounded"></div>
                         <div className="bg-black h-[2px] w-7 rounded"></div>
