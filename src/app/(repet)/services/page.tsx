@@ -1,18 +1,12 @@
 import { Suspense } from "react";
 import Testimonials from "@/app/_ui/testimonials";
+import Image from "next/image";
 
 export default function Services() {
 
     return (
         <div className=" desktop:px-[var(--px)] px-[var(--px-sm)] mb-20">
-            <div className="py-20 h-1/3">
-                <h1 className="font-bold text-4xl md:text-5xl mb-10 text-center">Services</h1>
-                <div className="min-w-[120px] max-w-[720px] desktop:min-w-[720px] mx-auto">
-                    <Suspense>
-                        <video id="info-video" src='/services/infomercial.mov' poster="/services/consult.jpg" muted controls className="" />
-                    </Suspense>
-                </div>
-            </div>
+            <h1 className="pt-10 font-bold text-4xl laptop:text-5xl mb-10 text-center">Services</h1>
             <div className="flex">
                 <div className="flex flex-col md:pl-20 md:grid md:grid-cols-2 md:grid-rows-4 gap-4 md:bg-gradient-to-r md:from-black md:to-red-500 md:rounded-e-3xl md:min-h-[614px] md:justify-center md:rounded-s-3xl">
                     <div className="p-5 bg-[var(--color-fourth)] row-[1] col-[1]">
