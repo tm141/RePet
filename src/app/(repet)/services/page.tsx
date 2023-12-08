@@ -1,25 +1,7 @@
-'use client'
-import { useState } from "react"
-import Image from "next/image";
 import { Suspense } from "react";
+import Testimonials from "@/app/_ui/testimonials";
 
 export default function Services() {
-    const [isHover, setIsHover] = useState(false);
-    // const [videoOnce, setVideoOnce] = useState(false); //dev mode so it does not play evertime refreshing page
-    const [videoOnce, setVideoOnce] = useState(true);
-
-    function toggleHover() {
-        setIsHover(!isHover);
-    }
-    function reloadVideo() {
-        (videoOnce) && setVideoOnce(false);
-        let video: HTMLVideoElement = document.getElementById("info-video")! as HTMLVideoElement;
-        video.load();
-    }
-
-    function toggleVideoOnce() {
-        setVideoOnce(true);
-    }
 
     return (
         <div className=" desktop:px-[var(--px)] px-[var(--px-sm)] mb-20">
@@ -27,7 +9,7 @@ export default function Services() {
                 <h1 className="font-bold text-4xl md:text-5xl mb-10 text-center">Services</h1>
                 <div className="min-w-[120px] max-w-[720px] desktop:min-w-[720px] mx-auto">
                     <Suspense>
-                        <video id="info-video" src='/services/infomercial.mov' poster="/services/consult.jpg" autoPlay={videoOnce} muted onMouseEnter={toggleHover} onMouseLeave={toggleHover} onEnded={reloadVideo} controls={isHover} className="" />
+                        <video id="info-video" src='/services/infomercial.mov' poster="/services/consult.jpg" muted controls className="" />
                     </Suspense>
                 </div>
             </div>
@@ -59,6 +41,8 @@ export default function Services() {
                     </div>
                 </div>
             </div>
+
+            <Testimonials />
         </div>
     )
 }
