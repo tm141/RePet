@@ -21,7 +21,8 @@ body {
 }
 
 :root{
-	--px: 20rem;
+	/* --px: 20rem; */
+	--px: 10rem;
 	--px-sm: 5rem;
 	--color-primary: #546EFF;
 	--color-primary-2: #758AFE;

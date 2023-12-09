@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { ProfileImgSkeleton } from "@/app/_ui/skeletons";
 
 export default async function Teams() {
-    const profiles: Profile[] = await fetchRandomUserApi(10) as Profile[];
+    const profiles: Profile[] = await fetchRandomUserApi(14) as Profile[];
     return (
         <div className="md:mx-[var(--px-sm)] desktop:mx-[var(--px)] pt-12 pb-20 px-10 bg-[var(--color-fourth)]">
             <p className="text-5xl font-bold pb-10 text-center">Meet our Executives</p>
